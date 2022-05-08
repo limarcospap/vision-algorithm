@@ -140,7 +140,8 @@ def image_vision(image, countFrame):
         show_img(combo_image, central_line[1])
 
 def main():
-    video = cv2.VideoCapture(sys.argv[1])
+    path_video_capture = 0 if sys.argv[1] == '0' else sys.argv[1]
+    video = cv2.VideoCapture(path_video_capture)
     countFrame = 0
     while True:
         print(countFrame)
